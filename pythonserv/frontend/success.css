@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color:#292525;
+}
+.formreglen{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    width: 100vw;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items:center ;
+    width: 600px;
+    height: 500px;
+    background-color:#423F3F;
+    flex-direction: column;
+    color: azure;
+}
+.txtrowform{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+ 
+}
+.message{
+    position: relative;
+    top: -150px;
+}
+.ok{
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+}
+.aa{
+    margin-right: 20px;
+}
