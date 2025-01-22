@@ -1,5 +1,6 @@
 const storedData = localStorage.getItem('registrationData');
 const registrationData = JSON.parse(storedData);
+
 document.addEventListener("DOMContentLoaded", function() {
   
   
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const passwordParagraph = document.getElementById("user_password");
   
       if (nameParagraph) {
-        nameParagraph.textContent =  userName;
+        nameParagraph.textContent =  " Имя пользователя: " + userName;
       } else {
         console.error("Элемент с id 'user_name' не найден!");
       }
@@ -33,7 +34,3 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("Данные в localStorage не найдены.");
     }
   });
-document.querySelector(".ok").addEventListener("click", function() {
-      document.querySelector(".formreglen").style.display = "none";
-  });
-  
