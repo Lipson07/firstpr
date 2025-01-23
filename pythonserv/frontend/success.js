@@ -17,15 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
       const passwordParagraph = document.getElementById("user_password");
   
       if (nameParagraph) {
-        nameParagraph.textContent =  " Имя пользователя: " + userName;
+        nameParagraph.textContent =    userName;
       } else {
         console.error("Элемент с id 'user_name' не найден!");
       }
-      if (passwordParagraph) {
-        passwordParagraph.textContent = "Пароль пользователя: " + userPassword;
-      } else {
-        console.error("Элемент с id 'user_password' не найден!");
-      }
+      
   
       
       console.log("Имя пользователя:", userName);

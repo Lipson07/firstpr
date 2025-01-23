@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, ValidationError
 import uvicorn
-from typing import Annotated
+from typing import Annotated, List
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -121,6 +121,14 @@ async def register(request: Request):
 async def success_page(request: Request):
     return templates.TemplateResponse("success.html", {"request": request})
 
+@app.get("/bd", response_model=List[str])  
+async def bd(session: AsyncSession = Depends(get_session)):
+    query = select(Data)
+    result = await session.execute(query)
+    data_objects = result.scalars().all()
 
+    names = [item.name for item in data_objects]  
+
+    return names
 if __name__ == "__main__":
     uvicorn.run(app="main:app", reload=True)

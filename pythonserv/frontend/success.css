@@ -50,6 +50,7 @@ body{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    margin-top: 20px;
 }
 .form2{
     position: absolute;
@@ -72,6 +73,7 @@ input{
  height: 30px;
  border-radius: 25px;
  font-size: 20px;
+ padding-left: 10px;
 }
 .chat{
     cursor: pointer;
@@ -110,4 +112,63 @@ input{
     height: 50px;
     cursor: pointer;
     
+}
+.arrowmenu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+ 
+}
+.menuname{
+    display: flex;
+    flex-direction: row;
+
+}
+.user_namemenu{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.menusetup{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 50px
+}
+.a{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.tema{
+    display: flex;
+    flex-direction: row;
+ 
+    width: 100%;
+  
+
+}
+.switch{
+    
+margin-left: 20px;
+display: flex;
+flex-direction: row;
+}
+.ren{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #533393;
+    border-radius: 25px;
+    margin-right: 20px;
+    top: 515px;
+}
+.elipse{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 510px;
+    left: 320px;
+    background-color: #181818;
+    border-radius: 100%;
+    border: #533393 5px solid;
 }
